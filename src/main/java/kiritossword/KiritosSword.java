@@ -2,6 +2,7 @@ package kiritossword;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.Item;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraft.world.item.CreativeModeTab;
@@ -35,11 +36,16 @@ public final class KiritosSword {
     public static final RegistryObject<CreativeModeTab> KIRITOS_TAB = CREATIVE_MODE_TABS.register("kiritostab",
             () -> CreativeModeTab.builder()
                     .icon(() -> KIRITOS_SWORD.get().getDefaultInstance())
+                    .title(Component.literal("Kiritos Sword Items"))
+                    .displayItems((parameters, output) -> {
+                        output.accept(KIRITOS_SWORD.get());
+                    })
                     .build());
 
     public KiritosSword(FMLJavaModLoadingContext context) {
         // Register items to the mod event bus
         ITEMS.register(context.getModBusGroup());
+        CREATIVE_MODE_TABS.register((context.getModBusGroup()));
         LOGGER.info("KiritosSword mod loaded!");
     }
 }
