@@ -28,7 +28,6 @@ public final class KiritosSword {
     public static final RegistryObject<Item> KIRITOS_SWORD = ITEMS.register("kiritossword",
             () -> new Item(new Item.Properties()
                     .setId(ITEMS.key("kiritossword")
-
                     )
             )
     );
@@ -37,7 +36,7 @@ public final class KiritosSword {
     public static final RegistryObject<CreativeModeTab> KIRITOS_TAB = CREATIVE_MODE_TABS.register("kiritostab",
             () -> CreativeModeTab.builder()
                     .icon(() -> KIRITOS_SWORD.get().getDefaultInstance())
-                    .title(Component.literal("Kiritos Sword Item"))
+                    .title(Component.literal("Kirito Sword Item"))
                     .displayItems((parameters, output) -> {
                         output.accept(KIRITOS_SWORD.get());
                     })
@@ -46,7 +45,7 @@ public final class KiritosSword {
     public KiritosSword(FMLJavaModLoadingContext context) {
         // Register items to the mod event bus
         ITEMS.register(context.getModBusGroup());
-        CREATIVE_MODE_TABS.register((context.getModBusGroup()));
+        CREATIVE_MODE_TABS.register(context.getModBusGroup());
         LOGGER.info("KiritosSword mod loaded!");
     }
 }
