@@ -25,12 +25,7 @@ public final class KiritosSword {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
     // Register the KiritosSword item
-    public static final RegistryObject<Item> KIRITOS_SWORD = ITEMS.register("kiritossword",
-            () -> new Item(new Item.Properties()
-                    .setId(ITEMS.key("kiritossword")
-                    )
-            )
-    );
+    public static final RegistryObject<Item> KIRITOS_SWORD = ITEMS.register("kiritossword", () -> new Elucidator((ITEMS.key("kiritossword"))));
 
     // Register a custom creative mode tab for this mod
     public static final RegistryObject<CreativeModeTab> KIRITOS_TAB = CREATIVE_MODE_TABS.register("kiritostab",
