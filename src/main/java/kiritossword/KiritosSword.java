@@ -28,6 +28,7 @@ public final class KiritosSword {
     public static final RegistryObject<Item> KIRITOS_SWORD = ITEMS.register("kiritossword",
             () -> new Item(new Item.Properties()
                     .setId(ITEMS.key("kiritossword")
+
                     )
             )
     );
@@ -36,7 +37,7 @@ public final class KiritosSword {
     public static final RegistryObject<CreativeModeTab> KIRITOS_TAB = CREATIVE_MODE_TABS.register("kiritostab",
             () -> CreativeModeTab.builder()
                     .icon(() -> KIRITOS_SWORD.get().getDefaultInstance())
-                    .title(Component.literal("Kiritos Sword Items"))
+                    .title(Component.literal("Kiritos Sword Item"))
                     .displayItems((parameters, output) -> {
                         output.accept(KIRITOS_SWORD.get());
                     })
