@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "kiritostab",
+  "group": "sword",
+  "key": {
+    "N": "minecraft:netherite_ingot",
+    "B": "minecraft:black_dye",
+    "S": "minecraft:netherite_sword",
+    "K": "minecraft:stick"
+  },
+  "pattern": [
+    "NBN",
+    "NSN",
+    " K "
+  ],
+  "result": {
+    "count": 1,
+    "id": "kiritossword:kiritossword"
+  }
+}
